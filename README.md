@@ -37,7 +37,7 @@ uvicorn app:app --host 0.0.0.0 --port 5000
 
 # 微信小程序端
 
-**./utils/request.js**
+封装微信 wx.request 请求：**./utils/request.js**
 
 ```js
 class Request {
@@ -86,7 +86,7 @@ const request = new Request("http://127.0.0.1", 5000)
 module.exports = request
 ```
 
-**./utils/api.js**
+统一管理接口：**./utils/api.js**
 
 ```js
 import request from './request.js'
@@ -103,7 +103,7 @@ const api = new Http()
 export default api
 ```
 
-**./pages/index/index.js**
+测试页面：**./pages/index/index.js**
 
 ```js
 import api from '../../utils/api.js'
