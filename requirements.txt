@@ -1,0 +1,7 @@
+aiomysql
+fastapi
+pydantic
+python_bcrypt
+PyYAML
+SQLAlchemy
+starlette
