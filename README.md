@@ -1,6 +1,10 @@
 # wechat-miniprogram-payment
 这是一个Python语言通过fastapi框架搭建服务端，实现微信小程序端进行微信支付案例项目。
 
+**详细教程地址：**https://blog.csdn.net/qq_47452807/article/details/145083251
+
+
+
 # 安装环境依赖
 
 ```
@@ -37,7 +41,7 @@ uvicorn app:app --host 0.0.0.0 --port 5000
 
 # 微信小程序端
 
-封装微信 wx.request 请求：**./utils/request.js**
+封装微信 wx.request 请求：**`./utils/request.js`**
 
 ```js
 class Request {
@@ -86,7 +90,7 @@ const request = new Request("http://127.0.0.1", 5000)
 module.exports = request
 ```
 
-统一管理接口：**./utils/api.js**
+统一管理接口：**`./utils/api.js`**
 
 ```js
 import request from './request.js'
@@ -103,7 +107,7 @@ const api = new Http()
 export default api
 ```
 
-测试页面：**./pages/index/index.js**
+测试页面：**`./pages/index/index.js`**
 
 ```js
 import api from '../../utils/api.js'
