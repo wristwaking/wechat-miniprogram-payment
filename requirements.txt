@@ -1,7 +1,5 @@
-aiomysql
-fastapi
-pydantic
-python_bcrypt
-PyYAML
-SQLAlchemy
-starlette
+aiohttp==3.9.4
+cryptography==42.0.7
+fastapi==0.115.6
+pydantic==2.10.5
+starlette==0.45.2
