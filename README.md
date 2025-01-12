@@ -1,8 +1,9 @@
 # wechat-miniprogram-payment
 这是一个Python语言通过fastapi框架搭建服务端，实现微信小程序端进行微信支付案例项目。
 
-**详细教程地址：**https://blog.csdn.net/qq_47452807/article/details/145083251
+详细教程地址：https://blog.csdn.net/qq_47452807/article/details/145083251
 
+![image](https://github.com/user-attachments/assets/e8f41f05-144b-40e4-8ebc-33ec9c322b56)
 
 
 # 安装环境依赖
