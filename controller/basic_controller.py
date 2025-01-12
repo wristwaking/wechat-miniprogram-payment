@@ -22,14 +22,14 @@ async def login(request: Request, params: dict = Body(...)):
         # 使用 GET 方法获取响应
         async with session.get("https://api.weixin.qq.com/sns/jscode2session", params=params) as response:
             # 返回响应的文本内容
-            print(await response.text())
-    print(code)
-    return success(code=200, message="登录成功", data={"code": code})
+            data = await response.json()
+    return success(code=200, message="登录成功", data=data)
 
 
 @router.post("/wechat/pay")
 async def login(request: Request, params: dict = Body(...)):
+    openid = params.get("openid")
     amount_total = params.get("amount_total")
     description = params.get("description")
-    data = await wechat_pay.create_wechat_pay(description=description, amount_total=amount_total)
+    data = await wechat_pay.create_wechat_pay(openid=openid, description=description, amount_total=amount_total)
     return success(code=200, message="请求成功", data=data)
